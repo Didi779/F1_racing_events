@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Manage Events</title>
+        <link rel="stylesheet" href="user_login.css">
+    </head>
+
+    <body>
+        <h2>Manage Events</h2>
+
+
+        <!-- Form for deleting an event -->
+        <h3>Delete Event</h3>
+        <form method="post" action="delete_event.php">
+            <label for="delete_id">Event ID:</label>
+            <input type="number" id="delete_id" name="delete_id" required placeholder="Enter the Event ID to delete" min="1"><br>
+            <input type="submit" value="Delete Event">
+        </form>
+
+        <!-- Form for updating an event -->
+        <h3>Update Event</h3>
+        <form method="post" action="update_event.php">
+            <label for="update_id">Event ID:</label>
+            <input type="number" id="update_id" name="update_id" required placeholder="Enter the Event ID to update" min="1"><br>
+
+            <!-- Fields for updating event data -->
+            <label for="event_date">Event Date:</label>
+            <input type="date" id="event_date" name="event_date" required><br>
+
+            <label for="event_venue">Event Venue:</label>
+            <input type="text" id="event_venue" name="event_venue" required placeholder="Enter the Event Venue"><br>
+
+            <label for="race_coordinator">Race Coordinator:</label>
+            <input type="text" id="race_coordinator" name="race_coordinator" required placeholder="Enter the Race Coordinator"><br>
+
+            <label for="podium_positions">Podium Positions:</label>
+            <input type="number" id="podium_positions" name="podium_positions" required placeholder="Enter the Podium Positions" min="1"><br>
+
+            <!-- Additional fields for team details -->
+            <label for="team_name">Team Name:</label>
+            <input type="text" id="team_name" name="team_name" required placeholder="Enter the Team Name"><br>
+
+            <label for="team_leader">Team Leader:</label>
+            <input type="text" id="team_leader" name="team_leader" required placeholder="Enter the Team Leader"><br>
+
+            <!-- Nationality -->
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" name="nationality" required>
+                <option value="" disabled selected>Select nationality</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Albania">Albania</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+            </select><br>
+
+            <!-- Race Time -->
+            <label for="race_time">Race Time:</label>
+            <input type="time" id="race_time" name="race_time" required><br>
+
+
+            <input type="submit" value="Update Event">
+        </form>
+
+        <div class="nav-buttons" style="margin-top: 20px; text-align: center;">
+            <a href="home.php" class="button" style="display: inline-block; padding: 10px 20px; margin: 10px; border-radius: 5px; text-decoration: none; color: white; background-color: #1F2833; font-weight: bold; font-size: 1rem; transition: background 0.3s ease;">
+                Home
+            </a>
+        </div>
+    </body>
+
+</html>

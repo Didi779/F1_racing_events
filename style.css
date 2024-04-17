@@ -1,0 +1,76 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 60px;
+    padding: 10px;
+    background-color: #0B0C10; /* Same background color as the previous page */
+    color: #C5C6C7; /* Same text color as the previous page */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10%;
+    background-color: #1F2833; /* Same container background color */
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Same box shadow */
+}
+
+/* Form styles */
+form {
+    display: inline-block;
+    width: 50%; /* Adjust as needed */
+    background-color: #1F2833;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Left-align the form elements */
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #C5C6C7;
+    color: #0B0C10;
+    font-size: 1rem;
+}
+
+/* Button styles */
+input[type="submit"] {
+    background-color: #45A29E;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover {
+    background-color: #66FCF1;
+}
+
+/* Form heading styles */
+h2 {
+    color: #66FCF1; /* Light blue color */
+    margin-bottom: 20px;
+}
+
+/* Link styles for already registered users */
+a {
+    color: #66FCF1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

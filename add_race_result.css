@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffccb8; /* Secondary color as the background color */
+    text-align: center;
+    padding: 50px;
+}
+
+/* Container for the welcome page content */
+.container {
+    background-color: #ffffff; /* White background for the content container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light box shadow */
+    width: 50%;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Welcome page title */
+h1 {
+    color: #f8b1e9; /* Primary text color */
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    margin-top: 20px; /* Add spacing above the buttons */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #ff7945; /* Primary color for buttons */
+    color: #ffffff; /* Third text color (white) */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #aa80b1; /* Secondary color on hover */
+}

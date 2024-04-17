@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Race Results</title>
+
+    </head>
+
+    <body>
+        <h2>Enter Race Results</h2>
+        <form method="post" action="add_race_result.php">
+            <!-- Event ID input -->
+            <label for="event_id">Event ID:</label>
+            <input type="number" id="event_id" name="event_id" required placeholder="Enter the Event ID" min="1"><br>
+
+            <!-- Team Name -->
+            <label for="team_name">Team Name:</label>
+            <input type="text" id="team_name" name="team_name" required placeholder="Enter the Team Name"><br>
+
+            <!-- Position -->
+            <label for="position">Position:</label>
+            <input type="number" id="position" name="position" required min="1" max="20" placeholder="Enter the Position"><br>
+
+            <!-- Points -->
+            <label for="points">Points:</label>
+            <input type="number" id="points" name="points" required min="0" placeholder="Enter the Points"><br>
+
+
+            <input type="submit" value="Add Results">
+        </form>
+    </body>
+
+</html>
+
+
+

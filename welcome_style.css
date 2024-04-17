@@ -1,0 +1,71 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 60px;
+    padding: 10px;
+    background-color: #0B0C10;
+    color: #C5C6C7;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10%;
+    background-color: #1F2833;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styles */
+h1 {
+    color: #66FCF1;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Animation for heading */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1rem;
+    color: #C5C6C7;
+}
+
+/* Navigation buttons container */
+.nav-buttons {
+    margin-top: 20px;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #45A29E;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #66FCF1;
+}

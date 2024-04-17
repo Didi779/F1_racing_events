@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>View Upcoming Event</title>
+        <link rel="stylesheet" href="past.css">
+
+        <style>
+            /* Inline CSS for styling the nav-buttons container */
+            .nav-buttons {
+                margin-top: 20px; /* Space between the form and buttons */
+                text-align: center; /* Center align the button */
+            }
+
+            /* Inline CSS for styling the button */
+            .button {
+                display: inline-block;
+                padding: 12px 20px; /* Padding around the button */
+                margin: 10px; /* Space between buttons */
+                border-radius: 8px; /* Rounded corners */
+                text-decoration: none; /* Remove underline */
+                color: #FFFFFF; /* White text color */
+                background-color: #45A29E; /* Teal background color */
+                font-weight: bold;
+                font-size: 1.1rem; /* Font size */
+                transition: background-color 0.3s ease, transform 0.2s ease; /* Animation for hover */
+                cursor: pointer; /* Change cursor to pointer */
+            }
+
+            /* Inline CSS for button hover effect */
+            .button:hover {
+                background-color: #66FCF1; /* Lighter teal color on hover */
+                transform: scale(1.05); /* Slightly enlarge button on hover */
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation button to view all races -->
+        <div class="nav-buttons">
+            <button onclick="viewUpcomingEvents()" class="button">View Upcoming Events</button>
+        </div><br><br>
+
+        <div class="nav-buttons" style="margin-top: 20px; text-align: center;">
+            <a href="home.php" class="button" style="display: inline-block; padding: 10px 20px; margin: 10px; border-radius: 5px; text-decoration: none; color: white; background-color: #1F2833; font-weight: bold; font-size: 1rem; transition: background 0.3s ease;">
+                Home
+            </a>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br>
+        <svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#1F2833" d="M0 60 Q300 0 600 60 Q900 120 1200 60 V120 H0 Z" />
+        <path fill="#45A29E" d="M0 60 Q300 60 600 0 Q900 60 1200 60 V120 H0 Z" />
+        </svg>
+
+        <!--JavaScript function to handle the button click -->
+        <script>
+            function viewUpcomingEvents() {
+                // Redirect the user to upcoming.php
+                window.location.href = 'upcoming.php';
+            }
+        </script>
+    </body>
+</html>

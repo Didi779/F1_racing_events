@@ -1,0 +1,81 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 60px;
+    padding: 10px;
+    background-color: #0B0C10; /* Same background color as other pages */
+    color: #C5C6C7; /* Same text color as other pages */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10%;
+    background-color: #1F2833; /* Consistent container background color */
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent box shadow */
+}
+
+/* Form styling */
+form {
+    width: 60%; /* Adjust width as needed */
+    margin: 0 auto;
+    background-color: #C5C6C7; /* Lighter background for the form */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Event ID input */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #45A29E;
+    border-radius: 5px;
+    background-color: #0B0C10;
+    color: #C5C6C7;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #45A29E;
+    color: #0B0C10;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #66FCF1; /* Same hover effect as other buttons */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #45A29E;
+    padding: 10px;
+    text-align: center;
+    color: #C5C6C7;
+    background-color: #1F2833; /* Consistent background color for table */
+}
+
+th {
+    background-color: #45A29E;
+    color: #0B0C10;
+}
+
+td:hover {
+    background-color: #66FCF1; /* Highlight rows on hover */
+}

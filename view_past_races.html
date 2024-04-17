@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>View Past Events</title>
+        <link rel="stylesheet" href="past.css">
+
+        <style>
+            /* Inline CSS for styling the nav-buttons container */
+            .nav-buttons {
+                margin-top: 20px; /* Space between the form and buttons */
+                text-align: center; /* Center align the button */
+            }
+
+            /* Inline CSS for styling the button */
+            .button {
+                display: inline-block;
+                padding: 12px 20px; /* Padding around the button */
+                margin: 10px; /* Space between buttons */
+                border-radius: 8px; /* Rounded corners */
+                text-decoration: none; /* Remove underline */
+                color: #FFFFFF; /* White text color */
+                background-color: #45A29E; /* Teal background color */
+                font-weight: bold;
+                font-size: 1.1rem; /* Font size */
+                transition: background-color 0.3s ease, transform 0.2s ease; /* Animation for hover */
+                cursor: pointer; /* Change cursor to pointer */
+            }
+
+            /* Inline CSS for button hover effect */
+            .button:hover {
+                background-color: #66FCF1; /* Lighter teal color on hover */
+                transform: scale(1.05); /* Slightly enlarge button on hover */
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+
+
+
+
+        <!-- Navigation button to view all races -->
+        <div class="nav-buttons">
+            <button onclick="viewAllRaces()" class="button">View All Events</button>
+        </div><br><br>
+
+        <h3>OR view event by event ID</h3>
+
+        <!-- Form to view past races by event ID -->
+        <form method="post" action="view_past_races.php">
+            <!-- Event ID input -->
+            <label for="id">Event ID:</label>
+            <input type="number" id="id" name="id" required placeholder="Enter the Event ID" min="1"><br>
+            <!-- Submit button -->
+            <input type="submit" value="View Past Events">
+        </form>
+        <!-- Section to display all race events -->
+        <div id="all-races-section" style="display: none;">
+            <h3>All Race Events</h3>
+            <!-- Placeholder for all race events data -->
+            <div id="all-races-data"></div>
+        </div>
+
+        <script>
+            // Function to view all race events
+            function viewAllRaces() {
+                // Send a request to the PHP script to fetch all race events
+                fetch('view_all_races.php')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json(); // Assuming JSON response
+                        })
+                        .then(data => {
+                            // Handle the data received from the PHP script
+                            const racesSection = document.getElementById('all-races-section');
+                            const racesData = document.getElementById('all-races-data');
+
+                            // Clear previous data and build a table with the race events data
+                            racesData.innerHTML = '';
+                            let table = '<table><tr><th>Event Date</th><th>Event Venue</th><th>Race Coordinator</th><th>Podium Positions</th><th>Team Name</th><th>Team Leader</th><th>Nationality</th><th>Race Time</th></tr>';
+
+                            data.forEach(event => {
+                                table += `<tr>
+                                <td>${event.EventDate}</td>
+                                <td>${event.EventVenue}</td>
+                                <td>${event.RaceCoordinator}</td>
+                                <td>${event.PodiumPositions}</td>
+                                <td>${event.team_name}</td>
+                                <td>${event.team_leader}</td>
+                                <td>${event.nationality}</td>
+                                <td>${event.race_time}</td>
+                            </tr>`;
+                            });
+
+                            table += '</table>';
+
+                            // Display the table in the 'all-races-data' div
+                            racesData.innerHTML = table;
+
+                            // Show the 'all-races-section'
+                            racesSection.style.display = 'block';
+                        })
+                        .catch(error => {
+                            // Display an error message to the user if there's an issue
+                            alert('An error occurred while fetching race events. Please try again later.');
+                            console.error('Error fetching race events:', error);
+                        });
+            }
+        </script>
+
+        <!-- Navigation to Home -->
+        <div class="nav-buttons" style="margin-top: 20px; text-align: center;">
+            <a href="home.php" class="button" style="display: inline-block; padding: 10px 20px; margin: 10px; border-radius: 5px; text-decoration: none; color: white; background-color: #1F2833; font-weight: bold; font-size: 1rem; transition: background 0.3s ease;">
+                Home
+            </a>
+        </div>
+
+    </body>
+
+</html>
